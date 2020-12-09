@@ -1,0 +1,38 @@
+; *************************************************************************************
+; KDM : Localization text for the Squad Menu.
+; *************************************************************************************
+[UISquadMenu]
+TitleStr="Squad Menu"
+SquadManagementStr="OPEN SQUAD MANAGEMENT"
+OpenSquadMenuStr="OPEN SQUAD MENU"
+
+; *************************************************************************************
+; KDM : Localization text for the Squad Management Screen.
+; *************************************************************************************
+[UIPersonnel_SquadBarracks_ForControllers]
+TitleStr="SQUAD [<XGParam:IntValue0>/<XGParam:IntValue1>] : <XGParam:StrValue0>"
+StatusStr = "SQUAD STATUS : <XGParam:StrValue0>"
+MissionsStr="MISSIONS : <XGParam:IntValue0>"
+BiographyStr="Squad Biography : <XGParam:StrValue0>"
+SquadSoldiersStr="SQUAD SOLDIERS"
+AvailableSoldiersStr="AVAILABLE SOLDIERS"
+
+NoSquadsStr="NO SQUADS EXIST"
+
+FocusUISquadStr ="FOCUS SQUAD UI"
+FocusUISoldiersStr="FOCUS SOLDIER UI"
+CreateSquadStr="CREATE SQUAD"
+DeleteSquadStr="DELETE SQUAD"
+PrevSquadStr="PREVIOUS SQUAD"
+NextSquadStr="NEXT SQUAD"
+ChangeSquadIconStr="CHANGE SQUAD ICON"
+RenameSquadStr="RENAME SQUAD"
+EditSquadBioStr="EDIT SQUAD BIO"
+ScrollSquadBioStr="SCROLL BIO TEXT"
+ViewSquadStr="VIEW SQUAD"
+
+ViewSquadSoldiersStr="VIEW SQUAD SOLDIERS"
+ViewAvailableSoldierStr="VIEW AVAILABLE SOLDIERS"
+
+TransferToSquadStr="TRANSFER TO SQUAD"
+RemoveFromSquadStr="REMOVE FROM SQUAD"

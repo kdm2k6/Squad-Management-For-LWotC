@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Default" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Guid>1b39929e-4e46-4f12-84e7-0919c0c1d879</Guid>
+    <Name>Squad Management For LWotC</Name>
+    <Description>Description of My XCOM 2 Mod.</Description>
+    <SteamPublishID>0</SteamPublishID>
+    <AssemblyName>Squad Management For LWotC</AssemblyName>
+    <RootNamespace>Squad Management For LWotC</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="Config\XComEditor.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComEngine.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComGame.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComSquadSettings.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Localization\SquadManagementForLWotC.int">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Localization\XComGame.int">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModPreview.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ReadMe.txt" />
+    <Content Include="Src\SquadManagementForLWotC\Classes\UIPersonnel_SquadBarracks_ForControllers.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\SquadManagementForLWotC\Classes\UIScreenListener_RobojumperSquadSelect.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\SquadManagementForLWotC\Classes\UIScreenListener_UIPersonnel_SquadBarracks.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\SquadManagementForLWotC\Classes\UISquadClassItem_ForControllers.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\SquadManagementForLWotC\Classes\UISquadIconSelectionScreen_ForControllers.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\SquadManagementForLWotC\Classes\UISquadMenu.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\SquadManagementForLWotC\Classes\UISquadMenu_ListItem.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\SquadManagementForLWotC\Classes\Utilities_ForControllers.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\SquadManagementForLWotC\Classes\X2DownloadableContentInfo_SquadManagementForLWotC.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\SquadManagementForLWotC\Classes\X2EventListener_UISquadSelect_NavHelpUpdate.uc">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Config" />
+    <Folder Include="Localization" />
+    <Folder Include="Src" />
+    <Folder Include="Src\SquadManagementForLWotC" />
+    <Folder Include="Src\SquadManagementForLWotC\Classes" />
+  </ItemGroup>
+  <Import Project="$(MSBuildLocalExtensionPath)\XCOM2.targets" />
+</Project>
