@@ -205,7 +205,10 @@ simulated function InitScreen(XComPlayerController InitController, UIMovie InitM
 	YLoc = MainPanel.Y + SquadSoldiersTab.Y + 75;
 	m_kList = Spawn(class'UIList', self);
 	m_kList.bStickyHighlight = false;
-	m_kList.InitList('listAnchor', XLoc, YLoc, m_iMaskWidth - 20, m_iMaskHeight);
+	// KDM : I originally had the width equal to m_iMaskWidth - 20, so the list fit
+	// perfectly within the background box; unfortunately, scrollbars would then overlap
+	// pertinent information. Consequently, just use the same width that Long War used.
+	m_kList.InitList('listAnchor', XLoc, YLoc, m_iMaskWidth, m_iMaskHeight);
 	m_kList.MoveToHighestDepth();
 
 	SetInitialCurrentSquadIndex();
@@ -1450,7 +1453,11 @@ simulated function OnSoldierSelected(UIList SquadList, int SelectedIndex)
 
 defaultproperties
 {
-	PanelW = 985;
+	// KDM : The panel width was initially set to 985 so everything fit perfectly
+	// together with virtually no empty space; unfortunately, this could result in
+	// the list's scrollbar overlapping information. Consequently, the list's width 
+	// needed to be increased by 20 pixels, and so to did the panel's width.
+	PanelW = 1005;
 	PanelH = 985;
 
 	BorderPadding = 10;
