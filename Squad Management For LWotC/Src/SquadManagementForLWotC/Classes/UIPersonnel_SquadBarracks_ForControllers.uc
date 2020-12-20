@@ -4,17 +4,14 @@
 //	PURPOSE:	A custom, controller-capable Squad Management screen designed 
 //				nearly from scratch.
 //----------------------------------------------------------------------------
-class UIPersonnel_SquadBarracks_ForControllers extends UIPersonnel config(SquadSettings);
+class UIPersonnel_SquadBarracks_ForControllers extends UIPersonnel_SquadBarracks config(SquadSettings);
 
-// KDM : I don't use bSelectSquad; however, it is referenced in LW files, so just leave it here and ignore it.
-var bool bSelectSquad;
+// KDM NEW NOTE : I don't use UIPersonnel_SquadBarracks's bSelectSquad.
+// KDM NEW NOTE : SquadImagePaths is needed for the Squad Icon Selector.
 
 // KDM : Allows us to restore the current 'mission squad' after 'viewing' its soldiers.
 var StateObjectReference CachedSquadBeforeViewing;
 var bool RestoreCachedSquadAfterViewing;
-
-// KDM : SquadImagePaths is needed for the Squad Icon Selector.
-var config array<string> SquadImagePaths;
 
 var localized string TitleStr, NoSquadsStr, DashesStr, StatusStr, MissionsStr, BiographyStr, SquadSoldiersStr, AvailableSoldiersStr;
 var localized string FocusUISquadStr, FocusUISoldiersStr, CreateSquadStr, DeleteSquadStr, PrevSquadStr, NextSquadStr, ChangeSquadIconStr,
@@ -50,9 +47,15 @@ var UIButton SquadSoldiersTab, AvailableSoldiersTab;
 // KDM : Apparently UE3 hates boolean arrays, so we'll go with an int array instead.
 var int CachedNavHelp[7];
 
+// KDM : These functions are overridden in UIPersonnel_SquadBarracks; however, my code was created
+// with the intention that their base version would be called. Make it so !
+simulated function CloseScreen() { super(UIPersonnel).CloseScreen(); }
+simulated function CreateSortHeaders() { super(UIPersonnel).CreateSortHeaders(); }
+simulated function UpdateData() { super(UIPersonnel).UpdateData(); }
+
 simulated function OnInit()
 {
-	super.OnInit();
+	super(UIPersonnel).OnInit();
 
 	// KDM : Hide pre-built UI elements we won't be using via Flash; the alternative is to : 
 	// 1.] Spawn them 2.] Init them with the appropriate MC name 3.] Hide them.
@@ -373,7 +376,7 @@ simulated function UpdateList()
 	local UIPersonnel_ListItem SoldierListItem;
 	local XComGameState_LWPersistentSquad CurrentSquadState;
 	
-	super.UpdateList();
+	super(UIPersonnel).UpdateList();
 
 	CurrentSquadState = GetCurrentSquad();
 
@@ -805,7 +808,7 @@ simulated function OnLoseFocus()
 {
 	`HQPRES.m_kAvengerHUD.NavHelp.ClearButtonHelp();
 	
-	super.OnLoseFocus();
+	super(UIPersonnel).OnLoseFocus();
 }
 
 simulated function OnRemoved()
@@ -821,7 +824,7 @@ simulated function OnRemoved()
 		SquadMenu.CachedSquad = GetCurrentSquad();
 	}
 
-	super.OnRemoved();
+	super(UIPersonnel).OnRemoved();
 }
 
 simulated function bool OnUnrealCommand(int cmd, int arg)
