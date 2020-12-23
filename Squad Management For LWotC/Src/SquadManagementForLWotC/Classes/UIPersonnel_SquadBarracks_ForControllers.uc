@@ -6,9 +6,6 @@
 //----------------------------------------------------------------------------
 class UIPersonnel_SquadBarracks_ForControllers extends UIPersonnel_SquadBarracks config(SquadSettings);
 
-// KDM NEW NOTE : I don't use UIPersonnel_SquadBarracks's bSelectSquad.
-// KDM NEW NOTE : SquadImagePaths is needed for the Squad Icon Selector.
-
 // KDM : Allows us to restore the current 'mission squad' after 'viewing' its soldiers.
 var StateObjectReference CachedSquadBeforeViewing;
 var bool RestoreCachedSquadAfterViewing;
