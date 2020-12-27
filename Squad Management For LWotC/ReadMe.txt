@@ -1,8 +1,8 @@
 ﻿// ===================================================
 // =============== General Mod Notes =================
 // ===================================================
-It is best to turn off 'autofill squds' within Robojumper's Squad Select or else empty LW squads become filled with 
-soldiers who are not actually part of the squad.
+It is best to turn off 'autofill squads' within Robojumper's Squad Select or else empty LW squads 
+become filled with soldiers who are not actually part of the squad.
 
 
 
